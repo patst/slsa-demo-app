@@ -1,0 +1,258 @@
+{
+    "_type": "https://in-toto.io/Statement/v0.1",
+    "predicateType": "https://slsa.dev/provenance/v0.2",
+    "subject": [
+        {
+            "name": "binary-linux-amd64",
+            "digest": {
+                "sha256": "d1413a5eba7f1385dc146fd698c29cf9e4fdf609b3c4f8145ecbbb241411c9db"
+            }
+        }
+    ],
+    "predicate": {
+        "builder": {
+            "id": "https://github.com/slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@refs/tags/v2.0.0"
+        },
+        "buildType": "https://github.com/slsa-framework/slsa-github-generator/go@v1",
+        "invocation": {
+            "configSource": {
+                "uri": "git+https://github.com/patst/slsa-demo-app@refs/tags/0.0.1",
+                "digest": {
+                    "sha1": "b58de837def99241f7aba0298e94eb55fe801104"
+                },
+                "entryPoint": ".github/workflows/slsa-goreleaser.yml"
+            },
+            "parameters": {},
+            "environment": {
+                "arch": "X64",
+                "github_actor": "patst",
+                "github_actor_id": "9567895",
+                "github_base_ref": "",
+                "github_event_name": "push",
+                "github_event_payload": {
+                    "after": "b58de837def99241f7aba0298e94eb55fe801104",
+                    "base_ref": "refs/heads/main",
+                    "before": "0000000000000000000000000000000000000000",
+                    "commits": [],
+                    "compare": "https://github.com/patst/slsa-demo-app/compare/0.0.1",
+                    "created": true,
+                    "deleted": false,
+                    "forced": false,
+                    "head_commit": {
+                        "author": {
+                            "email": "patrick.steinig@hdi.de",
+                            "name": "Patrick",
+                            "username": "patst"
+                        },
+                        "committer": {
+                            "email": "patrick.steinig@hdi.de",
+                            "name": "Patrick",
+                            "username": "patst"
+                        },
+                        "distinct": true,
+                        "id": "b58de837def99241f7aba0298e94eb55fe801104",
+                        "message": "fix to version",
+                        "timestamp": "2024-11-21T09:53:02+01:00",
+                        "tree_id": "348508a665e67c6409d3dd62ec4959e0e37bcd10",
+                        "url": "https://github.com/patst/slsa-demo-app/commit/b58de837def99241f7aba0298e94eb55fe801104"
+                    },
+                    "pusher": {
+                        "email": "patrick.steinig@googlemail.com",
+                        "name": "patst"
+                    },
+                    "ref": "refs/tags/0.0.1",
+                    "repository": {
+                        "allow_forking": true,
+                        "archive_url": "https://api.github.com/repos/patst/slsa-demo-app/{archive_format}{/ref}",
+                        "archived": false,
+                        "assignees_url": "https://api.github.com/repos/patst/slsa-demo-app/assignees{/user}",
+                        "blobs_url": "https://api.github.com/repos/patst/slsa-demo-app/git/blobs{/sha}",
+                        "branches_url": "https://api.github.com/repos/patst/slsa-demo-app/branches{/branch}",
+                        "clone_url": "https://github.com/patst/slsa-demo-app.git",
+                        "collaborators_url": "https://api.github.com/repos/patst/slsa-demo-app/collaborators{/collaborator}",
+                        "comments_url": "https://api.github.com/repos/patst/slsa-demo-app/comments{/number}",
+                        "commits_url": "https://api.github.com/repos/patst/slsa-demo-app/commits{/sha}",
+                        "compare_url": "https://api.github.com/repos/patst/slsa-demo-app/compare/{base}...{head}",
+                        "contents_url": "https://api.github.com/repos/patst/slsa-demo-app/contents/{+path}",
+                        "contributors_url": "https://api.github.com/repos/patst/slsa-demo-app/contributors",
+                        "created_at": 1732178058,
+                        "default_branch": "main",
+                        "deployments_url": "https://api.github.com/repos/patst/slsa-demo-app/deployments",
+                        "description": null,
+                        "disabled": false,
+                        "downloads_url": "https://api.github.com/repos/patst/slsa-demo-app/downloads",
+                        "events_url": "https://api.github.com/repos/patst/slsa-demo-app/events",
+                        "fork": false,
+                        "forks": 0,
+                        "forks_count": 0,
+                        "forks_url": "https://api.github.com/repos/patst/slsa-demo-app/forks",
+                        "full_name": "patst/slsa-demo-app",
+                        "git_commits_url": "https://api.github.com/repos/patst/slsa-demo-app/git/commits{/sha}",
+                        "git_refs_url": "https://api.github.com/repos/patst/slsa-demo-app/git/refs{/sha}",
+                        "git_tags_url": "https://api.github.com/repos/patst/slsa-demo-app/git/tags{/sha}",
+                        "git_url": "git://github.com/patst/slsa-demo-app.git",
+                        "has_discussions": false,
+                        "has_downloads": true,
+                        "has_issues": true,
+                        "has_pages": false,
+                        "has_projects": true,
+                        "has_wiki": true,
+                        "homepage": null,
+                        "hooks_url": "https://api.github.com/repos/patst/slsa-demo-app/hooks",
+                        "html_url": "https://github.com/patst/slsa-demo-app",
+                        "id": 891943409,
+                        "is_template": false,
+                        "issue_comment_url": "https://api.github.com/repos/patst/slsa-demo-app/issues/comments{/number}",
+                        "issue_events_url": "https://api.github.com/repos/patst/slsa-demo-app/issues/events{/number}",
+                        "issues_url": "https://api.github.com/repos/patst/slsa-demo-app/issues{/number}",
+                        "keys_url": "https://api.github.com/repos/patst/slsa-demo-app/keys{/key_id}",
+                        "labels_url": "https://api.github.com/repos/patst/slsa-demo-app/labels{/name}",
+                        "language": "Go",
+                        "languages_url": "https://api.github.com/repos/patst/slsa-demo-app/languages",
+                        "license": null,
+                        "master_branch": "main",
+                        "merges_url": "https://api.github.com/repos/patst/slsa-demo-app/merges",
+                        "milestones_url": "https://api.github.com/repos/patst/slsa-demo-app/milestones{/number}",
+                        "mirror_url": null,
+                        "name": "slsa-demo-app",
+                        "node_id": "R_kgDONSn58Q",
+                        "notifications_url": "https://api.github.com/repos/patst/slsa-demo-app/notifications{?since,all,participating}",
+                        "open_issues": 0,
+                        "open_issues_count": 0,
+                        "owner": {
+                            "avatar_url": "https://avatars.githubusercontent.com/u/9567895?v=4",
+                            "email": "patrick.steinig@googlemail.com",
+                            "events_url": "https://api.github.com/users/patst/events{/privacy}",
+                            "followers_url": "https://api.github.com/users/patst/followers",
+                            "following_url": "https://api.github.com/users/patst/following{/other_user}",
+                            "gists_url": "https://api.github.com/users/patst/gists{/gist_id}",
+                            "gravatar_id": "",
+                            "html_url": "https://github.com/patst",
+                            "id": 9567895,
+                            "login": "patst",
+                            "name": "patst",
+                            "node_id": "MDQ6VXNlcjk1Njc4OTU=",
+                            "organizations_url": "https://api.github.com/users/patst/orgs",
+                            "received_events_url": "https://api.github.com/users/patst/received_events",
+                            "repos_url": "https://api.github.com/users/patst/repos",
+                            "site_admin": false,
+                            "starred_url": "https://api.github.com/users/patst/starred{/owner}{/repo}",
+                            "subscriptions_url": "https://api.github.com/users/patst/subscriptions",
+                            "type": "User",
+                            "url": "https://api.github.com/users/patst",
+                            "user_view_type": "public"
+                        },
+                        "private": false,
+                        "pulls_url": "https://api.github.com/repos/patst/slsa-demo-app/pulls{/number}",
+                        "pushed_at": 1732180125,
+                        "releases_url": "https://api.github.com/repos/patst/slsa-demo-app/releases{/id}",
+                        "size": 0,
+                        "ssh_url": "git@github.com:patst/slsa-demo-app.git",
+                        "stargazers": 0,
+                        "stargazers_count": 0,
+                        "stargazers_url": "https://api.github.com/repos/patst/slsa-demo-app/stargazers",
+                        "statuses_url": "https://api.github.com/repos/patst/slsa-demo-app/statuses/{sha}",
+                        "subscribers_url": "https://api.github.com/repos/patst/slsa-demo-app/subscribers",
+                        "subscription_url": "https://api.github.com/repos/patst/slsa-demo-app/subscription",
+                        "svn_url": "https://github.com/patst/slsa-demo-app",
+                        "tags_url": "https://api.github.com/repos/patst/slsa-demo-app/tags",
+                        "teams_url": "https://api.github.com/repos/patst/slsa-demo-app/teams",
+                        "topics": [],
+                        "trees_url": "https://api.github.com/repos/patst/slsa-demo-app/git/trees{/sha}",
+                        "updated_at": "2024-11-21T08:53:09Z",
+                        "url": "https://github.com/patst/slsa-demo-app",
+                        "visibility": "public",
+                        "watchers": 0,
+                        "watchers_count": 0,
+                        "web_commit_signoff_required": false
+                    },
+                    "sender": {
+                        "avatar_url": "https://avatars.githubusercontent.com/u/9567895?v=4",
+                        "events_url": "https://api.github.com/users/patst/events{/privacy}",
+                        "followers_url": "https://api.github.com/users/patst/followers",
+                        "following_url": "https://api.github.com/users/patst/following{/other_user}",
+                        "gists_url": "https://api.github.com/users/patst/gists{/gist_id}",
+                        "gravatar_id": "",
+                        "html_url": "https://github.com/patst",
+                        "id": 9567895,
+                        "login": "patst",
+                        "node_id": "MDQ6VXNlcjk1Njc4OTU=",
+                        "organizations_url": "https://api.github.com/users/patst/orgs",
+                        "received_events_url": "https://api.github.com/users/patst/received_events",
+                        "repos_url": "https://api.github.com/users/patst/repos",
+                        "site_admin": false,
+                        "starred_url": "https://api.github.com/users/patst/starred{/owner}{/repo}",
+                        "subscriptions_url": "https://api.github.com/users/patst/subscriptions",
+                        "type": "User",
+                        "url": "https://api.github.com/users/patst",
+                        "user_view_type": "public"
+                    }
+                },
+                "github_head_ref": "",
+                "github_ref": "refs/tags/0.0.1",
+                "github_ref_type": "tag",
+                "github_repository_id": "891943409",
+                "github_repository_owner": "patst",
+                "github_repository_owner_id": "9567895",
+                "github_run_attempt": "1",
+                "github_run_id": "11950009355",
+                "github_run_number": "4",
+                "github_sha1": "b58de837def99241f7aba0298e94eb55fe801104",
+                "os": "ubuntu22"
+            }
+        },
+        "buildConfig": {
+            "steps": [
+                {
+                    "workingDir": "/home/runner/work/slsa-demo-app/slsa-demo-app/__PROJECT_CHECKOUT_DIR__",
+                    "command": [
+                        "/opt/hostedtoolcache/go/1.17.13/x64/bin/go",
+                        "mod",
+                        "vendor"
+                    ],
+                    "env": null
+                },
+                {
+                    "workingDir": "/home/runner/work/slsa-demo-app/slsa-demo-app/__PROJECT_CHECKOUT_DIR__",
+                    "command": [
+                        "/opt/hostedtoolcache/go/1.17.13/x64/bin/go",
+                        "build",
+                        "-mod=vendor",
+                        "-trimpath",
+                        "-tags=netgo",
+                        "-ldflags=-X main.Version=.0.1 -X main.Commit=b58de837def99241f7aba0298e94eb55fe801104 -X main.CommitDate=1732179182 -X main.TreeState=clean",
+                        "-o",
+                        "binary-linux-amd64"
+                    ],
+                    "env": [
+                        "GOOS=linux",
+                        "GOARCH=amd64",
+                        "GO111MODULE=on",
+                        "CGO_ENABLED=0"
+                    ]
+                }
+            ],
+            "version": 1
+        },
+        "metadata": {
+            "buildInvocationID": "11950009355-1",
+            "completeness": {
+                "parameters": true,
+                "environment": false,
+                "materials": false
+            },
+            "reproducible": false
+        },
+        "materials": [
+            {
+                "uri": "git+https://github.com/patst/slsa-demo-app@refs/tags/0.0.1",
+                "digest": {
+                    "sha1": "b58de837def99241f7aba0298e94eb55fe801104"
+                }
+            },
+            {
+                "uri": "https://github.com/actions/virtual-environments/releases/tag/ubuntu22/20241117.1.0"
+            }
+        ]
+    }
+}
