@@ -1,3 +1,12 @@
+name: SLSA docker releaser
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+
 env:
   IMAGE_REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
