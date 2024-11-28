@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: signed
+spec:
+  terminationGracePeriodSeconds: 0
+  containers:
+    - name: debug
+      # sha is required!!
+      image: ghcr.io/patst/slsa-demo-app:1.0.0@sha256:77ec2eb49faa75e907b1000f25c2c82622c0d9a84c8cca0325d24b00482f2089
+      resources:
+        limits:
+          memory: "64Mi"
+          cpu: "250m"
+      securityContext:
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+        capabilities:
+          drop:
+            - ALL
+        runAsNonRoot: true
+  # Uncomment and adjust the next lines if you need a writable folder in the container
+      volumeMounts:
+        - mountPath: /tmp
+          name: tmp
+  volumes:
+    - emptyDir: {}
+      name: tmp
+  restartPolicy: Never
+  securityContext:
+    runAsUser: 1000 # run as nonroot user
+    seccompProfile:
+      type: RuntimeDefault

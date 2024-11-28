@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: not-signed
+spec:
+  terminationGracePeriodSeconds: 0
+  containers:
+    - name: debug
+      image: nginxinc/nginx-unprivileged:latest
+      resources:
+        limits:
+          memory: "64Mi"
+          cpu: "250m"
+      securityContext:
+        allowPrivilegeEscalation: false
+        readOnlyRootFilesystem: true
+        capabilities:
+          drop:
+            - ALL
+        runAsNonRoot: true
+  # Uncomment and adjust the next lines if you need a writable folder in the container
+      volumeMounts:
+        - mountPath: /tmp
+          name: tmp
+  volumes:
+    - emptyDir: {}
+      name: tmp
+  restartPolicy: Never
+  securityContext:
+    runAsUser: 1000 # run as nonroot user
+    seccompProfile:
+      type: RuntimeDefault
